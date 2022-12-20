@@ -1,0 +1,8 @@
+mysql-connector-python==8.0.31
+fastapi[all]==0.88.0
+sqlalchemy==1.4.44
+pymysql==1.0.2
+
+
+pytest==7.2.0
+pytest-cov==4.0.0
