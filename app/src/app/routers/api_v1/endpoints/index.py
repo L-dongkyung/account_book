@@ -13,7 +13,7 @@ router = APIRouter()
 
 
 @router.get("/")
-async def index(session: Session = Depends(db.session)):
+async def index(session: Session = Depends(db.session)) -> Response:
     """
     index 확인용 API.
     """
