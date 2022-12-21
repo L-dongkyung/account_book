@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
 
 from models.crud import BaseCRUD
 from db import Base
@@ -13,3 +14,4 @@ class Detail(Base, BaseCRUD):
     store_phone = Column(String(length=100), nullable=False)
     store_info = Column(String(length=100), nullable=False)
     url = Column(String(length=100), nullable=False, index=True)
+    receipt = relationship("Receipt", back_populates="details", uselist=False)

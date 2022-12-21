@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 
 from models.crud import BaseCRUD
 from db import Base
+from models.detail import Detail
 
 
 # DB Model
@@ -13,3 +14,4 @@ class Receipt(Base, BaseCRUD):
     store = Column(String(length=255), nullable=False)
     memo = Column(String(length=255), nullable=False)
     details = relationship("Detail", back_populates="receipt")
+    user = relationship("User", back_populates="receipts", uselist=False)

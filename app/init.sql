@@ -4,7 +4,7 @@ use payhere;
 create table user
 (
     id                  int auto_increment primary key,
-    email               varchar(100)                            not null,
+    email               varchar(100) unique                     not null,
     created_at          datetime                                not null,
     updated_at          datetime                                not null,
     password            varchar(100)                            not null
