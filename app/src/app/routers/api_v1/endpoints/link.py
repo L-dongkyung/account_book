@@ -23,6 +23,7 @@ async def create_link(
 ):
     """
     link 생성 API.
+    :param link_info:
     :param session:
     :param current_user:
     :return:

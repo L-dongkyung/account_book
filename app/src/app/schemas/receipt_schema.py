@@ -1,7 +1,5 @@
 from pydantic import BaseModel
 
-from schemas.detail_schema import DetailInDB
-
 
 class CreateReceipt(BaseModel):
     payment: int

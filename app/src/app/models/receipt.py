@@ -3,7 +3,6 @@ from sqlalchemy.orm import relationship
 
 from models.crud import BaseCRUD
 from db import Base
-from models.detail import Detail
 
 
 # DB Model

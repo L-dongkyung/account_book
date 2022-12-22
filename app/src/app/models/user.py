@@ -4,8 +4,6 @@ from sqlalchemy.orm import relationship
 from models.crud import BaseCRUD
 from db import Base
 
-from models.receipt import Receipt
-
 
 # DB Model
 class User(Base, BaseCRUD):
