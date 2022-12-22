@@ -23,4 +23,9 @@ async def index(session: Session = Depends(db.session)) -> Response:
 
 @router.get("/me/", response_model=user_schema.User)
 async def get_me(current_user: User = Depends(get_current_user)):
+    """
+    토큰을 통해서 현재 사용자의 정보를 가져오는 API.
+    :param current_user: 현재 user.
+    :return: user
+    """
     return current_user
