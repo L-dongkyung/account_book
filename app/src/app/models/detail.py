@@ -13,5 +13,4 @@ class Detail(Base, BaseCRUD):
     store_address = Column(String(length=100))
     store_phone = Column(String(length=100))
     store_info = Column(String(length=100))
-    url = Column(String(length=100), index=True)
     receipt = relationship("Receipt", back_populates="details", uselist=False)

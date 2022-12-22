@@ -32,6 +32,16 @@ create table detail
     store_address       varchar(255)                             null,
     store_phone         varchar(20)                             null,
     store_info          varchar(100)                            null,
-    url                 varchar(100)                            null,
     foreign key (receipt_id) references receipt (id) on update restrict on delete cascade
+);
+
+create table link
+(
+    id                  int auto_increment primary key,
+    created_at          datetime                                not null,
+    updated_at          datetime                                not null,
+    link_hash           varchar(128)                            not null,
+    ttl                 int                                     not null,
+    detail_id           int                                     not null,
+    foreign key (detail_id) references detail (id) on update restrict on delete cascade
 );

@@ -15,7 +15,6 @@ class DetailInDB(BaseModel):
     store_address: str = None
     store_phone: str = None
     store_info: str = None
-    url: str = None
 
     class Config:
         orm_mode = True
