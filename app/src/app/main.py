@@ -13,7 +13,7 @@ config = asdict(Config())
 db.init_app(app, **config)
 
 # router
-app.include_router(api_router, tags=['index'])
+app.include_router(api_router)
 
 
 if __name__ == "__main__":

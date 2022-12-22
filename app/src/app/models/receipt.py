@@ -10,8 +10,8 @@ from models.detail import Detail
 class Receipt(Base, BaseCRUD):
     __tablename__ = 'receipt'
     user_id = Column(Integer,  ForeignKey('user.id'), nullable=False, index=True)
-    payment = Column(Integer, nullable=False)
-    store = Column(String(length=255), nullable=False)
-    memo = Column(String(length=255), nullable=False)
+    payment = Column(Integer)
+    store = Column(String(length=255))
+    memo = Column(String(length=255))
     details = relationship("Detail", back_populates="receipt")
     user = relationship("User", back_populates="receipts", uselist=False)
